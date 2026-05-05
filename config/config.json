@@ -1,1 +1,7 @@
-{ "blocked": ["steam.exe"] }
+{
+  "blocked": [
+    "steam.exe",
+    "discord.exe",
+    "cs2.exe"
+  ]
+}
