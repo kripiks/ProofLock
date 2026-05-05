@@ -1,9 +1,16 @@
 #include <windows.h>
 #include "../platform/Windows/ProcessUtils.h"
+#include "../config/ConfigLoader.h"
 
 int main() {
+
+    auto blocked = LoadBlockedProcesses();
+
     while (true) {
-        KillProcessByName(L"steam.exe");
+        for (auto& proc : blocked) {
+            KillProcessByName(proc);
+        }
+
         Sleep(2000);
     }
 
