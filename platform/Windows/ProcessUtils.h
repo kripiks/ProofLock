@@ -1,1 +1,4 @@
-// WinAPI process utils header
+#pragma once
+#include <string>
+
+bool KillProcessByName(const std::wstring& processName);
